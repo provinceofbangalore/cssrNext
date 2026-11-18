@@ -1,4 +1,4 @@
-import LegacyAppShell from '@/components/LegacyApp';
+import LegacyAppShell from '../../components/LegacyApp.jsx';
 
 export const dynamic = 'force-dynamic';
 
