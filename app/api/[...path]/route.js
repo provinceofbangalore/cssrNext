@@ -4,10 +4,10 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import sanitizeHtml from 'sanitize-html';
 import { z, ZodError } from 'zod';
 import { put } from '@vercel/blob';
 import { db } from '@/lib/prisma';
+import { safeBody } from '@/lib/safeBody';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -146,14 +146,6 @@ async function authenticate(request) {
 
   if (!user || !user.active) return { error: json({ error: 'Account disabled' }, 401) };
   return { user, permissions: new Set(permissionsOf(user)) };
-}
-
-function safeBody(value) {
-  return sanitizeHtml(value || '', {
-    allowedTags: ['p', 'br', 'h1', 'h2', 'h3', 'h4', 'strong', 'em', 'b', 'i', 'ul', 'ol', 'li', 'blockquote', 'a', 'hr', 'table', 'thead', 'tbody', 'tr', 'td', 'th'],
-    allowedAttributes: { a: ['href', 'target', 'rel'] },
-    allowedSchemes: ['http', 'https', 'mailto']
-  });
 }
 
 function normalize(resource, raw) {

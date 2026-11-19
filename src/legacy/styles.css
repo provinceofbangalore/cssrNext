@@ -23,6 +23,10 @@ h1,h2,h3,h4,h5{color:var(--text)}a{text-decoration:none;color:inherit}button{fon
 @media(max-width:575px){.site-header>.container-xl{min-height:66px}.brand strong{font-size:19px}.brand small{font-size:9px}.brand img{width:43px;height:43px}.top-search input{width:75px}.hero,.hero-body{min-height:440px}.hero h1{font-size:36px}.hero-copy{padding-right:4px}.hero-bg{opacity:.3;background-size:auto 100%;background-repeat:no-repeat}.hero p{font-size:15px}.btn-lg{font-size:12px;padding:12px 13px}.quick-grid a{padding:14px 10px;gap:9px;font-size:11px}.quick-grid a strong{white-space:normal}.quick-grid a svg{width:20px;flex-shrink:0}.section-pad{padding-top:30px;padding-bottom:30px}.feature-card{min-height:95px}.journey-strip h3{width:100%}.journey-step{max-width:unset;width:calc(50% - 12px)}.story-card img{height:120px}.story-content{padding:11px}.story-card h3{font-size:13px}.story-card p{font-size:10px}.page-hero h1{font-size:30px}.admin-content{padding:15px}.admin-top{padding:0 13px}.admin-user-info{display:none}.admin-section-heading h1{font-size:21px}.stat-card{padding:13px;min-height:100px;gap:10px}.stat-card strong{font-size:23px}.stat-card .stat-icon{padding:7px}.admin-card{padding:13px}.admin-table-toolbar{gap:9px}.admin-search{min-width:0;flex:1}.cms-drawer{width:100vw}.cms-drawer-header,.cms-drawer-form{padding:18px}.cms-drawer-footer{margin:16px -18px -18px;padding:14px 18px}.check-grid{grid-template-columns:1fr}.admin-login{grid-template-columns:1fr}.login-left{display:none}.login-right{min-height:100vh;padding:25px}.back-website{margin-bottom:36px}}
 
 
+.ck.ck-editor__main > .ck-editor__editable_root:not(.ck-editor__nested-editable) {
+    height: 250px;
+}
+
 /* CSSR.IN visual refinements, November 2026 — logo, text rhythm, spacing & footer */
 :root{font-size:14px}
 body,body p,.rich-content p,.rich-content li{font-size:14px;line-height:1.75}
